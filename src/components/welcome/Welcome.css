@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+
+body {
+  background-color: #f5f2e9;
+}
+
+.welcome_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.logo_link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.welcome_top_left {
+  display: flex;
+  align-items: center;
+}
+
+.welcome_top_left img {
+  width: 32px;
+  height: 35px;
+  object-fit: cover;
+  margin: 10px;
+}
+.welcome_top_left h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.welcome_top_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome_top_right .welcome_top_right_navigatonlinks {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+.welcome_top_right .welcome_top_right_navigatonlinks a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+.welcome_top_right .welcome_top_right_buttons button {
+  height: 52px;
+  width: 189px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+.welcome_hero {
+  padding: 20px;
+  height: 504px;
+  display: flex;
+}
+.welcome_hero_invitation {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.welcome_hero_invitation .welcome_hero_invitation_headline h3 {
+  padding: 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0;
+}
+.welcome_hero_invitation .welcome_hero_invitation_description {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+.welcome_hero_invitation .welcome_hero_invitation_actions button {
+  width: 185px;
+  height: 52px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-right: 30px;
+}
+.welcome_hero_invitation .welcome_hero_invitation_location {
+  margin-top: 24px;
+  text-align: left;
+}
+.welcome_hero_invitation .welcome_hero_invitation_location p {
+  display: flex;
+  align-items: center;
+}
+.welcome_hero_potrait {
+  width: 50%;
+}
+.welcome_hero_potrait img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  object-fit: cover;
+}
+.welcome_footer {
+  border: 1px solid black;
+  border-width: thin;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.welcome_footer_essential {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome_footer h5 {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.welcome_top_left {
+  cursor: pointer;
+}
+.welcome_top_left img {
+  transition: transform 0.4s ease;
+}
+.welcome_top_left:hover img {
+  transform: rotate(-12deg) scale(1.1);
+}
+.welcome_top_left h2 {
+  transition: letter-spacing 0.3s ease;
+}
+.welcome_top_left:hover h2 {
+  letter-spacing: 1px;
+}
+
+.welcome_top_right .welcome_top_right_navigatonlinks a {
+  position: relative;
+  padding-bottom: 2px;
+}
+.welcome_top_right .welcome_top_right_navigatonlinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.welcome_top_right .welcome_top_right_navigatonlinks a:hover::after {
+  transform: scaleX(1);
+}
+
+.welcome_top_right .welcome_top_right_buttons button {
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+.welcome_top_right .welcome_top_right_buttons button:hover {
+  background-color: black;
+  color: white;
+}
+
+.welcome_hero_invitation .welcome_hero_invitation_actions button {
+  cursor: pointer;
+  border: 1px solid black;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+.welcome_hero_invitation .welcome_hero_invitation_actions button:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.welcome_top_right .welcome_top_right_buttons button:active,
+.welcome_hero_invitation .welcome_hero_invitation_actions button:active {
+  transform: translateY(1px);
+}
+
+.welcome_hero_invitation .welcome_hero_invitation_headline h3 {
+  transition: transform 0.4s ease;
+}
+.welcome_hero_invitation .welcome_hero_invitation_headline h3:hover {
+  transform: translateX(10px);
+}
+
+.welcome_hero_invitation .welcome_hero_invitation_location p {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.welcome_hero_invitation .welcome_hero_invitation_location p:hover {
+  transform: translateX(6px);
+}
+
+.welcome_hero_potrait {
+  overflow: hidden;
+  border: 1px solid black; /* border container pe shift kiya, taaki zoom pe na badhe */
+}
+.welcome_hero_potrait img {
+  border: none;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.welcome_hero_potrait:hover img {
+  transform: scale(1.05);
+}
+
+.welcome_footer_essential {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+.welcome_footer:hover .welcome_footer_essential {
+  opacity: 0.5; /* baaki dim ho jate hain */
+}
+.welcome_footer .welcome_footer_essential:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.welcome_top_right .welcome_top_right_navigatonlinks a:focus-visible,
+.welcome_top_right .welcome_top_right_buttons button:focus-visible,
+.welcome_hero_invitation .welcome_hero_invitation_actions button:focus-visible {
+  outline: 2px solid #8a6d3b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

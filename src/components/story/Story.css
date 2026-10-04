@@ -1,0 +1,119 @@
+/* ---------- Story section ---------- */
+.story_content {
+  display: flex;
+  align-items: stretch;
+  gap: 60px;
+  padding: 80px;
+  background-color: #ede8dc;
+  transition: background-color 0.3s ease;
+}
+.story_content:hover {
+  background-color: #e4ddcc;
+}
+
+/* left: image */
+.story_content_image {
+  flex: 1.5; /* text se 1.5 guna chauda */
+  min-height: 640px;
+  overflow: hidden; /* zoom image ke bahar na nikle */
+  border: 1px solid black;
+}
+.story_content_image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.story_content_image:hover img {
+  transform: scale(1.05);
+}
+
+/* right: text */
+.story_content_text {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.story_content_text h3 {
+  margin: 0 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.story_content_text:hover h3 {
+  opacity: 1;
+}
+
+.story_content_text h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.story_content_text p {
+  max-width: 520px;
+  margin: 24px 0 0;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* signature */
+.story_content_text h1 {
+  margin: 32px 0 0;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* "A little more about us" link */
+.story_content_text h5 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 28px 0 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.6;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.story_content_text h5:hover {
+  opacity: 1;
+  transform: translateX(8px);
+}
+.story_content_text h5 svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* mobile: image upar, text neeche */
+@media (max-width: 800px) {
+  .story_content {
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+  .story_content_image,
+  .story_content_text {
+    width: 100%;
+  }
+  .story_content_image img {
+    height: 320px;
+  }
+  .story_content_text h2 {
+    font-size: 36px;
+  }
+}

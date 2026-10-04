@@ -1,0 +1,107 @@
+/* ---------- Gathering section ---------- */
+.gathering {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* center ki jagah left */
+  text-align: left; /* center ki jagah left */
+  padding: 100px 80px; /* left mein thodi jagah */
+  background-color: #f5f2e9;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+  background-image: url("../../assets/table.png");
+}
+
+/* chhote Roboto labels (upar wala aur neeche wali details line) */
+.gathering h4 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.gathering:hover h4 {
+  opacity: 1;
+}
+.gathering h4:first-of-type {
+  margin-bottom: 20px;
+}
+
+/* headline */
+.gathering h2 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.1;
+  transition:
+    transform 0.4s ease,
+    letter-spacing 0.4s ease;
+}
+.gathering h2:hover {
+  transform: translateY(-4px);
+  letter-spacing: 1px;
+}
+
+/* description */
+.gathering p {
+  max-width: 560px;
+  margin: 28px 0;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* button */
+.gathering-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  height: 52px;
+  padding: 0 36px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+.gathering-button:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-3px);
+}
+.gathering-button:active {
+  transform: translateY(1px);
+}
+.gathering-button:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 3px;
+}
+.gathering-button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+.gathering-button:hover svg {
+  transform: translateX(6px); /* arrow aage badhta hai */
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .gathering {
+    padding: 60px 20px;
+  }
+  .gathering h2 {
+    font-size: 44px;
+  }
+  .gathering p {
+    font-size: 19px;
+  }
+}

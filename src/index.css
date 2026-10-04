@@ -1,0 +1,26 @@
+.curtain {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 999;
+  pointer-events: none;
+}
+.strip {
+  flex: 1;
+  height: 100%;
+  margin-right: -1px; /* strips ke beech patli line na dikhe */
+  background: #111;
+  transform-origin: bottom;
+}
+.curtain_text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 48px;
+  color: #f5f2e9;
+}
